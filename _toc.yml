@@ -1,0 +1,12 @@
+format: jb-article
+root: pages/main
+sections:
+- file: pages/description/background
+  sections:
+  - file: pages/description/project
+# - file: pages/leaderboard/leaderboard
+- file: pages/notebooks/overview
+  sections:
+  - file: pages/notebooks/modelling/MedICSS2021
+- file: pages/other/contributors
+# - file: data/README
