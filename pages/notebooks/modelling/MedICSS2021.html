@@ -51,6 +51,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Contributors" href="../../other/contributors.html" />
@@ -246,10 +248,46 @@
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-datasets">
-   Load datasets
+  <a class="reference internal nav-link" href="#load-training-forecast-and-test-datasets">
+   Load Training, Forecast, and Test datasets
   </a>
   <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d1-tadpole-training-set">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       D1
+      </span>
+     </code>
+     : TADPOLE Training set
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d2-d3-tadpole-prediction-forecast-sets-longitudinal-cross-sectional">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       D2
+      </span>
+     </code>
+     /
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       D3
+      </span>
+     </code>
+     : TADPOLE Prediction/Forecast sets (longitudinal/cross-sectional)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d4-tadpole-test-data-future-visits-from-prediction-forecast-sets">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       D4
+      </span>
+     </code>
+     : TADPOLE Test data (future visits from Prediction/Forecast sets)
+    </a>
+   </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#lb1-tadpole-standard-training-set">
      LB1: TADPOLE Standard training set.
@@ -329,6 +367,14 @@
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span><span class="p">,</span> <span class="n">model_selection</span><span class="p">,</span> <span class="n">preprocessing</span><span class="p">,</span> <span class="n">pipeline</span>
 
+<span class="c1"># Required if running on Google Colab</span>
+<span class="n">RunningInCOLAB</span> <span class="o">=</span> <span class="s1">&#39;google.colab&#39;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">get_ipython</span><span class="p">())</span>
+<span class="k">if</span> <span class="n">RunningInCOLAB</span><span class="p">:</span>
+    <span class="o">!</span>git clone https://www.github.com/ucl-pond/tadpole-medicss.git
+    <span class="n">pth_to_add</span> <span class="o">=</span> <span class="s1">&#39;/content/tadpole-medicss/pages/notebooks/modelling&#39;</span>
+    <span class="kn">import</span> <span class="nn">sys</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">pth_to_add</span><span class="p">)</span>
+
 <span class="kn">import</span> <span class="nn">tadpole_metrics</span>
 
 <span class="o">%</span><span class="k">matplotlib</span> inline
@@ -338,8 +384,32 @@
 </div>
 </div>
 </div>
-<div class="section" id="load-datasets">
-<h1>Load datasets<a class="headerlink" href="#load-datasets" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="load-training-forecast-and-test-datasets">
+<h1>Load Training, Forecast, and Test datasets<a class="headerlink" href="#load-training-forecast-and-test-datasets" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="d1-tadpole-training-set">
+<h2><code class="docutils literal notranslate"><span class="pre">D1</span></code>: TADPOLE Training set<a class="headerlink" href="#d1-tadpole-training-set" title="Permalink to this headline">¶</a></h2>
+<p>This training dataset contains medical data including:</p>
+<ul class="simple">
+<li><p>MRI scans</p></li>
+<li><p>PET scans</p></li>
+<li><p>DTI scans</p></li>
+<li><p>Cognitive assessment data</p></li>
+<li><p>Demographic data</p></li>
+<li><p>Genetic data</p></li>
+<li><p>CSF data</p></li>
+</ul>
+</div>
+<div class="section" id="d2-d3-tadpole-prediction-forecast-sets-longitudinal-cross-sectional">
+<h2><code class="docutils literal notranslate"><span class="pre">D2</span></code>/<code class="docutils literal notranslate"><span class="pre">D3</span></code>: TADPOLE Prediction/Forecast sets (longitudinal/cross-sectional)<a class="headerlink" href="#d2-d3-tadpole-prediction-forecast-sets-longitudinal-cross-sectional" title="Permalink to this headline">¶</a></h2>
+<p>These are subsets of <code class="docutils literal notranslate"><span class="pre">D1</span></code>; the list of candidate “rollover” subjects for whom to generate forecasts</p>
+</div>
+<div class="section" id="d4-tadpole-test-data-future-visits-from-prediction-forecast-sets">
+<h2><code class="docutils literal notranslate"><span class="pre">D4</span></code>: TADPOLE Test data (future visits from Prediction/Forecast sets)<a class="headerlink" href="#d4-tadpole-test-data-future-visits-from-prediction-forecast-sets" title="Permalink to this headline">¶</a></h2>
+<p>The future data to be predicted/forecast.</p>
+<p>See the <a class="reference external" href="https://ucl-pond.github.io/tadpole-medicss/pages/description/project.html">background information</a> and <a class="reference external" href="https://tadpole.grand-challenge.org/data/">TADPOLE website</a> for more information on the TADPOLE datasets.</p>
+<hr/>
+<p>Earlier versions of this project occurred before <code class="docutils literal notranslate"><span class="pre">D4</span></code> existsed, and so they used the so-called “Leaderboard” datasets generated from <code class="docutils literal notranslate"><span class="pre">D1</span></code> and <code class="docutils literal notranslate"><span class="pre">D2</span></code>:</p>
+</div>
 <div class="section" id="lb1-tadpole-standard-training-set">
 <h2>LB1: TADPOLE Standard training set.<a class="headerlink" href="#lb1-tadpole-standard-training-set" title="Permalink to this headline">¶</a></h2>
 <p>This training dataset contains medical data including:</p>
@@ -356,8 +426,7 @@
 <div class="section" id="lb2-tadpole-standard-prediction-set">
 <h2>LB2: TADPOLE Standard prediction set.<a class="headerlink" href="#lb2-tadpole-standard-prediction-set" title="Permalink to this headline">¶</a></h2>
 <p>This is a subset of LB1; the list of subjects to be predicted in the final submission</p>
-<p>See the github readme file [“https://github.com/swhustla/pycon2017-alzheimers-hack/blob/master/README.md”] for more information and explanations on the data sources.</p>
-<p>If you haven’t generated the datasets yet, run the following:</p>
+<p>If you haven’t generated the Leaderboard datasets yet, run the following (code available from the <a class="reference external" href="https://github.com/noxtoby/TADPOLE">TADPOLE repo</a>):</p>
 <div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">from</span> <span class="n">makeLeaderboardDataset</span> <span class="n">import</span> <span class="o">*</span>
 <span class="n">import</span> <span class="n">pandas</span> <span class="n">as</span> <span class="n">pd</span>
 
@@ -368,7 +437,9 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load TADPOLE data</span>
 <span class="n">DATA_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../data&#39;</span><span class="p">)</span>
-<span class="n">tadpole</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="s1">&#39;TADPOLE_LB1_LB2.csv&#39;</span><span class="p">,</span> <span class="n">low_memory</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="c1"># tadpole = pd.read_csv(DATA_DIR / &#39;TADPOLE_LB1_LB2.csv&#39;, low_memory=False)</span>
+<span class="n">tadpole</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="s1">&#39;TADPOLE_D1_D2.csv&#39;</span><span class="p">,</span> <span class="n">low_memory</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">tadpole_test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="s1">&#39;TADPOLE_D4_corr.csv&#39;</span><span class="p">,</span> <span class="n">low_memory</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1">#tadpole.head()</span>
 </pre></div>
@@ -428,7 +499,6 @@
         <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-    
 </pre></div>
 </div>
 </div>
@@ -455,7 +525,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(12012, 1910)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(12741, 1908)
 </pre></div>
 </div>
 </div>
@@ -463,7 +533,7 @@
 </div>
 <div class="section" id="data-cleaning">
 <h1>Data cleaning<a class="headerlink" href="#data-cleaning" title="Permalink to this headline">¶</a></h1>
-<p>In this section we will reduce the dataset from 1910 features to the 20 of interest that we have selected in the section above</p>
+<p>In this section we will reduce the dataset from <span class="math notranslate nohighlight">\(&gt;1900\)</span> features to the <span class="math notranslate nohighlight">\(20\)</span> of interest that we have selected in the section above</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
@@ -547,7 +617,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(12012, 20)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(12741, 20)
 </pre></div>
 </div>
 </div>
@@ -565,6 +635,17 @@
 <span class="ow">in</span> <span class="n">split</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">tadpole_prepared</span><span class="p">,</span> <span class="n">tadpole</span><span class="p">[[</span><span class="s2">&quot;PTMARRY&quot;</span><span class="p">,</span> <span class="s2">&quot;PTGENDER&quot;</span><span class="p">,</span><span class="s2">&quot;PTETHCAT&quot;</span><span class="p">]]):</span>
     <span class="n">strat_train_set</span> <span class="o">=</span> <span class="n">tadpole</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">train_index</span><span class="p">]</span>
     <span class="n">strat_test_set</span> <span class="o">=</span> <span class="n">tadpole</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">test_index</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># # WIP/FIXME. Make this work below: full_pipeline.fit_transform(strat_test_set)</span>
+<span class="c1"># train_index = (tadpole[[&#39;D1&#39;,&#39;D2&#39;]]==1).all(axis=1).values</span>
+<span class="c1"># test_index  = (tadpole_test[&#39;LB4&#39;]==1).values</span>
+<span class="c1"># strat_train_set = tadpole.loc[train_index]</span>
+<span class="c1"># strat_test_set  = tadpole_test.loc[test_index]</span>
 </pre></div>
 </div>
 </div>
@@ -590,7 +671,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(9609, 20)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(10192, 20)
 </pre></div>
 </div>
 </div>
@@ -667,7 +748,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.9778135146768818
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.7997169729028715
 </pre></div>
 </div>
 </div>
@@ -720,7 +801,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/MedICSS2021_33_0.png" src="../../../_images/MedICSS2021_33_0.png" />
+<img alt="../../../_images/MedICSS2021_34_0.png" src="../../../_images/MedICSS2021_34_0.png" />
 </div>
 </div>
 </div>
@@ -751,7 +832,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10488.441080704242
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10381.745336613489
 </pre></div>
 </div>
 </div>
@@ -777,7 +858,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/MedICSS2021_37_0.png" src="../../../_images/MedICSS2021_37_0.png" />
+<img alt="../../../_images/MedICSS2021_38_0.png" src="../../../_images/MedICSS2021_38_0.png" />
 </div>
 </div>
 </div>
@@ -820,7 +901,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9017894298793175
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9129070223617105
 </pre></div>
 </div>
 </div>
@@ -833,9 +914,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 339,    0,   59],
-       [   0,  418,   81],
-       [  61,   35, 1410]], dtype=int64)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 341,    0,   70],
+       [   0,  485,   74],
+       [  40,   38, 1501]])
 </pre></div>
 </div>
 </div>
@@ -848,9 +929,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MCI    5921
-CN     2051
-AD     1637
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MCI    6310
+CN     2186
+AD     1696
 dtype: int64
 </pre></div>
 </div>
@@ -866,13 +947,13 @@ dtype: int64
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
-          AD       0.85      0.85      0.85       398
-          CN       0.92      0.84      0.88       499
-         MCI       0.91      0.94      0.92      1506
+          AD       0.90      0.83      0.86       411
+          CN       0.93      0.87      0.90       559
+         MCI       0.91      0.95      0.93      1579
 
-    accuracy                           0.90      2403
-   macro avg       0.89      0.88      0.88      2403
-weighted avg       0.90      0.90      0.90      2403
+    accuracy                           0.91      2549
+   macro avg       0.91      0.88      0.90      2549
+weighted avg       0.91      0.91      0.91      2549
 </pre></div>
 </div>
 </div>
