@@ -59,7 +59,7 @@ One reason why they fail is the difficulty identifying patients at early disease
 **Code**
 ^^^
 
-Python notebook(s) for the MedICSS project
+Python notebook(s) for the TADPOLE MedICSS project
 
 +++
 
@@ -85,7 +85,7 @@ MedICSS TADPOLE Project Leads:
 
 ```{link-button} other/contributors
 :type: ref
-:text: Explore the notebooks
+:text: Current Contributors
 :classes: btn-outline-primary btn-block stretched-link
 ```
 
