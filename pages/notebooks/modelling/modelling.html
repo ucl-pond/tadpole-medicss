@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelling &#8212; TADPOLE at MedICSS</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom_css.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/js/custom_js.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">TADPOLE at MedICSS</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../main.html">
+   TADPOLE Challenge project at MedICSS
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../description/background.html">
+   Background
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../description/project.html">
+     The Challenge
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../overview.html">
+   Project Notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="MedICSS2021.html">
+     MedICSS 2021
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../other/contributors.html">
+   Contributors
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/pages/notebooks/modelling/modelling.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ucl-pond/tadpole-medicss/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ucl-pond/tadpole-medicss//issues/new?title=Issue%20on%20page%20%2Fpages/notebooks/modelling/modelling.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/ucl-pond/tadpole-medicss/edit/master/pages/notebooks/modelling/modelling.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usage">
+   <strong>
+    Usage
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tutorials">
+   <strong>
+    Tutorials
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installation">
+   <strong>
+    Installation
+   </strong>
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="modelling">
+<h1>Modelling<a class="headerlink" href="#modelling" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center" id="logo">
+<a class="reference internal image-reference" href="_static/img/Figure_TrainForecast_new.png"><img alt="_static/img/Figure_TrainForecast_new.png" src="_static/img/Figure_TrainForecast_new.png" style="height: 150px;" /></a>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-12 docutils">
+<div class="card w-100 border-2 shadow docutils">
+<div class="card-header bg-warning docutils">
+<p class="card-text"><strong><em>Disease Course Mapping</em> with Leaspy</strong></p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">Leaspy is a Python software package that implements the <a class="reference external" href="https://disease-progression-modelling.github.io/pages/models/disease_course_mapping.html">Disease Course Mapping</a> methods. In particular, it is designed for the statistical analysis of <strong>longitudinal data</strong>, particularly <strong>medical</strong> data that comes in a form of <strong>repeated observations</strong> of patients at different time-points.
+Considering these series of short-term data, the software aims at :</p>
+<ul class="simple">
+<li><p class="card-text">recombining them to reconstruct the long-term spatio-temporal trajectory of progression</p></li>
+<li><p class="card-text">positioning each patient observations relatively to the group-average progression</p></li>
+<li><p class="card-text">quantifying the impact of different cofactors (gender, genetic mutation, environmental factors, etc) on the progression of the biomarkers</p></li>
+<li><p class="card-text">imputing missing values</p></li>
+<li><p class="card-text">predicting future observations</p></li>
+<li><p class="card-text">simulating virtual patients</p></li>
+</ul>
+<p class="card-text"><span class="sphinx-bs badge badge-primary">Software</span>
+<span class="sphinx-bs badge badge-primary">Python package</span>
+<span class="sphinx-bs badge badge-primary">Open source</span>
+<span class="sphinx-bs badge badge-primary">Tutorials</span>
+<span class="sphinx-bs badge badge-primary">Continuous integration</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>The software is distributed on <a class="reference external" href="https://gitlab.com/icm-institute/aramislab/leaspy">Gitlab</a> under the GNU GPLv3 Licence. It has a complete <a class="reference external" href="https://leaspy.readthedocs.io/en/latest/">documentation</a> as well as an active community that you can solicit through the use of the dedicated <a class="reference external" href="https://gitlab.com/icm-institute/aramislab/leaspy/-/issues">bug &amp; issue tracker</a>. The software operates on <span class="sphinx-bs badge badge-dark">Mac</span> and <span class="sphinx-bs badge badge-dark">Linux</span> - <span class="sphinx-bs badge badge-dark">Windows</span> is also working though no guarantee can be given as no specific development was developed for this platform.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Leaspy</strong> originally comes from  from LEArning Spatiotemporal Patterns in Python.</p>
+</div>
+<div class="section" id="usage">
+<h2><strong>Usage</strong><a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>The package has been written to offer a user-friendly API in order to be used by non-experts. The API essentially includes the following functions</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">leaspy.fit(...)</span></code></dt><dd><p>To estimate the average progression of the biomarkers</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">leaspy.personalize(...)</span></code></dt><dd><p>To estimate the individual parameters that allows to derive the average progression to fit individual Data</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">leaspy.estimate(...)</span></code></dt><dd><p>To impute or predict the values of an individual at any time-point</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">leaspy.simulate(...)</span></code></dt><dd><p>To simulate synthetic patients</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">leaspy.load(...)</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">leaspy.save(...)</span></code></dt><dd><p>To load and save the entire description of the disease progression, share it or reuse it on another cohort</p>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>New developers are welcome to participate and contribute</strong> !</p>
+<p>While offering an easy-to-use API, the package has been designed with an internal modular architecture in order to make new developments possible. In particular, new developments are on they way to enlarge the possibilities of types of disease progression, in particular with ordinal data or progressions affected by drugs.</p>
+</div>
+</div>
+<div class="section" id="tutorials">
+<h2><strong>Tutorials</strong><a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h2>
+<p>We have developed few tutorials to better understand the goals of Disease Course Mapping, in particular how it allows to go beyond the current limitations of linear mixed-effects models, while getting familiar with Leaspy.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-8 offset-md-2 docutils">
+<div class="card w-100 m-2 shadow docutils">
+<div class="card-header bg-warning docutils">
+<p class="card-text"><strong>Tutorial 1: Limitations of linear mixed-effects model</strong></p>
+</div>
+<div class="card-body text-justify docutils">
+<p class="card-text">This introduction to longitudinal data progressively unveils the limitations of linear models, beginning by a cross-patient linear regression, going to individual linear regressions, then to a linear mixed-effects model, finishing by the limitations of linear models that Leaspy is able to overcome.</p>
+<p class="card-text"><a class="reference external" href="https://disease-progression-modelling.github.io/pages/notebooks/disease_course_mapping/TP1_LMM.html">Go to the tutorial</a></p>
+</div>
+<div class="card-footer docutils">
+<p class="card-text"><span class="sphinx-bs badge badge-warning">1 hour</span> <span class="sphinx-bs badge badge-primary">longitudinal data</span> <span class="sphinx-bs badge badge-primary">Linear model</span> <span class="sphinx-bs badge badge-primary">Mixed effects model</span></p>
+</div>
+</div>
+</div>
+<div class="d-flex col-8 offset-md-2 docutils">
+<div class="card w-100 m-2 shadow docutils">
+<div class="card-header bg-warning docutils">
+<p class="card-text"><strong>Tutorial 2: <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">World</span></code> with Leaspy</strong></p>
+</div>
+<div class="card-body text-justify docutils">
+<p class="card-text">This introduction to Leaspy gives a handful overview of Leaspy possibilities along with the user-friendly commands to use it</p>
+<p class="card-text"><a class="reference external" href="https://disease-progression-modelling.github.io/pages/notebooks/disease_course_mapping/TP2_leaspy_beginner.html">Go to the tutorial</a></p>
+</div>
+<div class="card-footer docutils">
+<p class="card-text"><span class="sphinx-bs badge badge-warning">30 minutes</span> <span class="sphinx-bs badge badge-primary">longitudinal data</span> <span class="sphinx-bs badge badge-primary">non-linear mixed-effects model</span></p>
+</div>
+</div>
+</div>
+<div class="d-flex col-8 offset-md-2 docutils">
+<div class="card w-100 m-2 shadow docutils">
+<div class="card-header bg-warning docutils">
+<p class="card-text"><strong>Tutorial 3: Real-case usage</strong></p>
+</div>
+<div class="card-body text-justify docutils">
+<p class="card-text">This tutorial is designed for the ones that want to use Leaspy with their own data. We therefore designed this tutorial to present step-by-step the different operations that you might go through : data manipulation, normalization, interpretation of the algorithm convergence, in-depth understanding of the parameters and hyperparameters, etc.</p>
+<p class="card-text"><a class="reference external" href="https://disease-progression-modelling.github.io/pages/notebooks/disease_course_mapping/TP3_advanced_leaspy.html">Go to the tutorial</a></p>
+</div>
+<div class="card-footer docutils">
+<p class="card-text"><span class="sphinx-bs badge badge-warning">1 hour 30</span> <span class="sphinx-bs badge badge-primary">longitudinal data</span> <span class="sphinx-bs badge badge-primary">Missing values</span> <span class="sphinx-bs badge badge-primary">longitudinal data</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="installation">
+<h2><strong>Installation</strong><a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>The installation procedure is entirely detailed on the <a class="reference external" href="https://gitlab.com/icm-institute/aramislab/leaspy">dedicated Gitlab repository</a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./pages/notebooks/modelling"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Neil Oxtoby<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

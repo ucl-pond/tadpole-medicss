@@ -1,0 +1,934 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedICSS 2021 &#8212; TADPOLE at MedICSS</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom_css.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/js/custom_js.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Contributors" href="../../other/contributors.html" />
+    <link rel="prev" title="Project Notebooks" href="../overview.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">TADPOLE at MedICSS</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../main.html">
+   TADPOLE Challenge project at MedICSS
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../description/background.html">
+   Background
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../description/project.html">
+     The Challenge
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../overview.html">
+   Project Notebooks
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     MedICSS 2021
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../other/contributors.html">
+   Contributors
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/pages/notebooks/modelling/MedICSS2021.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ucl-pond/tadpole-medicss/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ucl-pond/tadpole-medicss//issues/new?title=Issue%20on%20page%20%2Fpages/notebooks/modelling/MedICSS2021.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/ucl-pond/tadpole-medicss/edit/master/pages/notebooks/modelling/MedICSS2021.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ucl-pond/tadpole-medicss/master?urlpath=tree/pages/notebooks/modelling/MedICSS2021.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/ucl-pond/tadpole-medicss/blob/master/pages/notebooks/modelling/MedICSS2021.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   MedICSS 2021
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-datasets">
+   Load datasets
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lb1-tadpole-standard-training-set">
+     LB1: TADPOLE Standard training set.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lb2-tadpole-standard-prediction-set">
+     LB2: TADPOLE Standard prediction set.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#choose-variables-of-interest">
+   Choose variables of interest
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-cleaning">
+   Data cleaning
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#split-the-dataset-into-train-and-test">
+     Split the dataset into train and test
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#impute-missing-data">
+     Impute Missing Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linear-regression">
+   Linear Regression
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#predicting-adas13">
+     Predicting ADAS13
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#predicting-ventricles-size">
+     Predicting Ventricles size
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#random-forests">
+   Random Forests
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="medicss-2021">
+<h1>MedICSS 2021<a class="headerlink" href="#medicss-2021" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dateutil</span> <span class="kn">import</span> <span class="n">rrule</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span><span class="p">,</span> <span class="n">model_selection</span><span class="p">,</span> <span class="n">preprocessing</span><span class="p">,</span> <span class="n">pipeline</span>
+
+<span class="kn">import</span> <span class="nn">tadpole_metrics</span>
+
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="load-datasets">
+<h1>Load datasets<a class="headerlink" href="#load-datasets" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="lb1-tadpole-standard-training-set">
+<h2>LB1: TADPOLE Standard training set.<a class="headerlink" href="#lb1-tadpole-standard-training-set" title="Permalink to this headline">¶</a></h2>
+<p>This training dataset contains medical data including:</p>
+<ul class="simple">
+<li><p>MRI scans</p></li>
+<li><p>PET scans</p></li>
+<li><p>DTI scans</p></li>
+<li><p>Cognitive assessment data</p></li>
+<li><p>Demographic data</p></li>
+<li><p>Genetic data</p></li>
+<li><p>CSF data</p></li>
+</ul>
+</div>
+<div class="section" id="lb2-tadpole-standard-prediction-set">
+<h2>LB2: TADPOLE Standard prediction set.<a class="headerlink" href="#lb2-tadpole-standard-prediction-set" title="Permalink to this headline">¶</a></h2>
+<p>This is a subset of LB1; the list of subjects to be predicted in the final submission</p>
+<p>See the github readme file [“https://github.com/swhustla/pycon2017-alzheimers-hack/blob/master/README.md”] for more information and explanations on the data sources.</p>
+<p>If you haven’t generated the datasets yet, run the following:</p>
+<div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">from</span> <span class="n">makeLeaderboardDataset</span> <span class="n">import</span> <span class="o">*</span>
+<span class="n">import</span> <span class="n">pandas</span> <span class="n">as</span> <span class="n">pd</span>
+
+<span class="n">generateLBdatasets</span><span class="p">(</span><span class="n">inputFolder</span><span class="o">=</span><span class="s1">&#39;../data/&#39;</span><span class="p">,</span> <span class="n">outputFolder</span><span class="o">=</span><span class="s1">&#39;../data/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load TADPOLE data</span>
+<span class="n">DATA_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../data&#39;</span><span class="p">)</span>
+<span class="n">tadpole</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="s1">&#39;TADPOLE_LB1_LB2.csv&#39;</span><span class="p">,</span> <span class="n">low_memory</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1">#tadpole.head()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="choose-variables-of-interest">
+<h1>Choose variables of interest<a class="headerlink" href="#choose-variables-of-interest" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convert the variable DX to three categories only (MCI, AD, CN) and save it to &#39;diagnosis&#39;</span>
+<span class="n">dx_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;MCI&#39;</span><span class="p">:</span> <span class="s1">&#39;MCI&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;NL&#39;</span><span class="p">:</span> <span class="s1">&#39;CN&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Dementia&#39;</span><span class="p">:</span> <span class="s1">&#39;AD&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;MCI to Dementia&#39;</span><span class="p">:</span> <span class="s1">&#39;AD&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;NL to MCI&#39;</span><span class="p">:</span> <span class="s1">&#39;MCI&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;MCI to NL&#39;</span><span class="p">:</span> <span class="s1">&#39;CN&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Dementia to MCI&#39;</span><span class="p">:</span> <span class="s1">&#39;MCI&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;NL to Dementia&#39;</span><span class="p">:</span> <span class="s1">&#39;AD&#39;</span>
+    <span class="p">}</span>
+<span class="n">tadpole</span><span class="p">[</span><span class="s1">&#39;diagnosis&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tadpole</span><span class="p">[</span><span class="s1">&#39;DX&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">dx_map</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_num_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ADAS13&quot;</span><span class="p">,</span> <span class="s2">&quot;Ventricles&quot;</span><span class="p">]</span>
+<span class="n">y_cat_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;diagnosis&quot;</span><span class="p">]</span>
+
+<span class="n">outcomes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ADAS13&quot;</span><span class="p">,</span> <span class="s2">&quot;diagnosis&quot;</span><span class="p">,</span> <span class="s2">&quot;Ventricles&quot;</span><span class="p">]</span>
+<span class="n">cog_tests_attributes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;CDRSB&quot;</span><span class="p">,</span> <span class="s2">&quot;ADAS11&quot;</span><span class="p">,</span> <span class="s2">&quot;MMSE&quot;</span><span class="p">,</span> <span class="s2">&quot;RAVLT_immediate&quot;</span><span class="p">]</span>
+<span class="n">mri_measures</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Hippocampus&#39;</span><span class="p">,</span> <span class="s1">&#39;WholeBrain&#39;</span><span class="p">,</span> <span class="s1">&#39;Entorhinal&#39;</span><span class="p">,</span> <span class="s1">&#39;MidTemp&#39;</span> <span class="p">,</span> <span class="s2">&quot;FDG&quot;</span><span class="p">,</span> <span class="s2">&quot;AV45&quot;</span><span class="p">]</span>
+<span class="n">pet_measures</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;FDG&quot;</span><span class="p">,</span> <span class="s2">&quot;AV45&quot;</span><span class="p">]</span>
+<span class="n">csf_measures</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ABETA_UPENNBIOMK9_04_19_17&quot;</span><span class="p">,</span> <span class="s2">&quot;TAU_UPENNBIOMK9_04_19_17&quot;</span><span class="p">,</span> <span class="s2">&quot;PTAU_UPENNBIOMK9_04_19_17&quot;</span><span class="p">]</span>
+<span class="n">risk_factors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;APOE4&quot;</span><span class="p">,</span> <span class="s2">&quot;AGE&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">useful_numerical_attribs</span> <span class="o">=</span> <span class="n">cog_tests_attributes</span> <span class="o">+</span> <span class="n">mri_measures</span> <span class="o">+</span> <span class="n">pet_measures</span> <span class="o">+</span> <span class="n">csf_measures</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;AGE&#39;</span><span class="p">]</span>
+<span class="n">useful_categorical_attribs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;RID&#39;</span><span class="p">,</span> <span class="s1">&#39;SITE&#39;</span><span class="p">,</span> <span class="s1">&#39;DXCHANGE&#39;</span><span class="p">,</span> <span class="s1">&#39;PTGENDER&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;PTEDUCAT&#39;</span><span class="p">,</span> <span class="s1">&#39;PTETHCAT&#39;</span><span class="p">,</span> <span class="s1">&#39;PTRACCAT&#39;</span><span class="p">,</span> <span class="s1">&#39;PTMARRY&#39;</span><span class="p">,</span> <span class="s1">&#39;APOE4&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convert_float</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">csf_measures</span><span class="p">:</span>
+    <span class="n">tadpole</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">tadpole</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">convert_float</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tadpole</span><span class="p">[</span><span class="n">useful_categorical_attribs</span><span class="p">]</span> <span class="o">=</span> <span class="n">tadpole</span><span class="p">[</span><span class="n">useful_categorical_attribs</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tadpole</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(12012, 1910)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="data-cleaning">
+<h1>Data cleaning<a class="headerlink" href="#data-cleaning" title="Permalink to this headline">¶</a></h1>
+<p>In this section we will reduce the dataset from 1910 features to the 20 of interest that we have selected in the section above</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span><span class="p">,</span> <span class="n">LabelBinarizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">SimpleImputer</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">LabelBinarizerPipelineFriendly</span><span class="p">(</span><span class="n">LabelBinarizer</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;this would allow us to fit the model based on the X input.&quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">LabelBinarizerPipelineFriendly</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">LabelBinarizerPipelineFriendly</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">fit_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">LabelBinarizerPipelineFriendly</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.base</span> <span class="kn">import</span> <span class="n">BaseEstimator</span><span class="p">,</span> <span class="n">TransformerMixin</span>
+
+<span class="k">class</span> <span class="nc">DataFrameSelector</span><span class="p">(</span><span class="n">BaseEstimator</span><span class="p">,</span> <span class="n">TransformerMixin</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attribute_names</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attribute_names</span> <span class="o">=</span> <span class="n">attribute_names</span>
+    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+    <span class="k">def</span> <span class="nf">transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">X</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_names</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;selector&#39;</span><span class="p">,</span> <span class="n">DataFrameSelector</span><span class="p">(</span><span class="n">useful_numerical_attribs</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s1">&#39;imputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;median&quot;</span><span class="p">)),</span>
+<span class="c1">#     (&#39;attribs_adder&#39;, CombinedAttributesAdder()),</span>
+    <span class="p">(</span><span class="s1">&#39;std_scaler&#39;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">()),</span>
+<span class="p">])</span>
+
+<span class="n">cat_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;selector&#39;</span><span class="p">,</span> <span class="n">DataFrameSelector</span><span class="p">([</span><span class="s1">&#39;APOE4&#39;</span><span class="p">])),</span>
+    <span class="p">(</span><span class="s1">&#39;label_binarizer&#39;</span><span class="p">,</span> <span class="n">LabelBinarizerPipelineFriendly</span><span class="p">()),</span>
+<span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">FeatureUnion</span>
+
+<span class="n">full_pipeline</span> <span class="o">=</span> <span class="n">FeatureUnion</span><span class="p">(</span><span class="n">transformer_list</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;num_pipeline&quot;</span><span class="p">,</span> <span class="n">num_pipeline</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;cat_pipeline&quot;</span><span class="p">,</span> <span class="n">cat_pipeline</span><span class="p">),</span>
+<span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tadpole_prepared</span> <span class="o">=</span> <span class="n">full_pipeline</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">tadpole</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tadpole_prepared</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(12012, 20)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="split-the-dataset-into-train-and-test">
+<h2>Split the dataset into train and test<a class="headerlink" href="#split-the-dataset-into-train-and-test" title="Permalink to this headline">¶</a></h2>
+<p>Perform stratified shuffle split of data  (to avoid over sampling on marital status, ethinicity or gender)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">StratifiedShuffleSplit</span>
+
+<span class="n">split</span> <span class="o">=</span> <span class="n">StratifiedShuffleSplit</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">train_index</span><span class="p">,</span> <span class="n">test_index</span> \
+<span class="ow">in</span> <span class="n">split</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">tadpole_prepared</span><span class="p">,</span> <span class="n">tadpole</span><span class="p">[[</span><span class="s2">&quot;PTMARRY&quot;</span><span class="p">,</span> <span class="s2">&quot;PTGENDER&quot;</span><span class="p">,</span><span class="s2">&quot;PTETHCAT&quot;</span><span class="p">]]):</span>
+    <span class="n">strat_train_set</span> <span class="o">=</span> <span class="n">tadpole</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">train_index</span><span class="p">]</span>
+    <span class="n">strat_test_set</span> <span class="o">=</span> <span class="n">tadpole</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">test_index</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tadpole_prepared_train</span> <span class="o">=</span> <span class="n">full_pipeline</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">strat_train_set</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tadpole_prepared_test</span> <span class="o">=</span> <span class="n">full_pipeline</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">strat_test_set</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tadpole_prepared_train</span><span class="o">.</span><span class="n">shape</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(9609, 20)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="impute-missing-data">
+<h2>Impute Missing Data<a class="headerlink" href="#impute-missing-data" title="Permalink to this headline">¶</a></h2>
+<p>Now that we have our reduced dataset, let’s impute the numerical and categorical features separately.</p>
+<p>We can use different strategies, two of the most common ones to use are: Mean and Most frequent.</p>
+<p>Remember! In order to avoid data leakage from the train to the test data, the imputer is tested only in the training dataset!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">SimpleImputer</span>
+
+<span class="c1">#Impute numerical variables with the mean value </span>
+<span class="n">imputer</span> <span class="o">=</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;mean&quot;</span><span class="p">)</span>
+<span class="n">imputer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">strat_train_set</span><span class="p">[</span><span class="n">y_num_cols</span><span class="p">])</span>
+
+<span class="n">y_num_train_imp</span> <span class="o">=</span> <span class="n">imputer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">strat_train_set</span><span class="p">[</span><span class="n">y_num_cols</span><span class="p">])</span>
+<span class="n">y_num_test_imp</span> <span class="o">=</span> <span class="n">imputer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">strat_test_set</span><span class="p">[</span><span class="n">y_num_cols</span><span class="p">])</span>
+
+<span class="c1">#Impute categorical values </span>
+<span class="n">imputer_cat</span> <span class="o">=</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;most_frequent&quot;</span><span class="p">)</span>
+<span class="n">imputer_cat</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">strat_train_set</span><span class="p">[</span><span class="n">y_cat_cols</span><span class="p">])</span>
+
+<span class="n">y_cat_train_imp</span> <span class="o">=</span> <span class="n">imputer_cat</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">strat_train_set</span><span class="p">[</span><span class="n">y_cat_cols</span><span class="p">])</span>
+<span class="n">y_cat_test_imp</span> <span class="o">=</span> <span class="n">imputer_cat</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">strat_test_set</span><span class="p">[</span><span class="n">y_cat_cols</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="linear-regression">
+<h1>Linear Regression<a class="headerlink" href="#linear-regression" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="predicting-adas13">
+<h2>Predicting ADAS13<a class="headerlink" href="#predicting-adas13" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tadpole_labels_train</span> <span class="o">=</span> <span class="n">y_num_train_imp</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#ADAS13</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span> 
+
+<span class="n">lin_reg</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span> 
+
+<span class="c1">#Fit model on the training set that we have prepared (with 20 variables) and the variable that we want to predict </span>
+<span class="n">lin_reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">tadpole_prepared_train</span><span class="p">,</span> <span class="n">tadpole_labels_train</span><span class="p">)</span>
+
+<span class="c1">#Predict on testing set</span>
+<span class="n">tadpole_predictions</span> <span class="o">=</span> <span class="n">lin_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">tadpole_prepared_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_error</span>
+
+<span class="n">tadpole_labels_test</span> <span class="o">=</span> <span class="n">y_num_test_imp</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#ADAS13</span>
+<span class="n">mae_Adas13</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">tadpole_predictions</span><span class="p">,</span> <span class="n">tadpole_labels_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mae_Adas13</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.9778135146768818
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Code from https://github.com/morallito/medium_ds_series/blob/main/%5BDS0001%5D/main.py#L7</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+
+<span class="k">def</span> <span class="nf">get_prediction_interval</span><span class="p">(</span><span class="n">prediction</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">test_predictions</span><span class="p">,</span> <span class="n">pi</span><span class="o">=</span><span class="mf">.95</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Get a prediction interval for a linear regression.</span>
+<span class="sd">    INPUTS:</span>
+<span class="sd">    - Single prediction,</span>
+<span class="sd">    - y_test</span>
+<span class="sd">    - All test set predictions,</span>
+<span class="sd">    - Prediction interval threshold (default = .95)</span>
+<span class="sd">    OUTPUT:</span>
+<span class="sd">    - Prediction interval for single prediction</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c1">#get standard deviation of y_test</span>
+    <span class="n">sum_errs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">y_test</span> <span class="o">-</span> <span class="n">test_predictions</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">stdev</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_test</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">sum_errs</span><span class="p">)</span>
+    <span class="c1">#get interval from standard deviation</span>
+    <span class="n">one_minus_pi</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">pi</span>
+    <span class="n">ppf_lookup</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">one_minus_pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">z_score</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="n">ppf_lookup</span><span class="p">)</span>
+    <span class="n">interval</span> <span class="o">=</span> <span class="n">z_score</span> <span class="o">*</span> <span class="n">stdev</span>
+    <span class="c1">#generate prediction interval lower and upper bound cs_24</span>
+    <span class="n">lower</span><span class="p">,</span> <span class="n">upper</span> <span class="o">=</span> <span class="n">prediction</span> <span class="o">-</span> <span class="n">interval</span><span class="p">,</span> <span class="n">prediction</span> <span class="o">+</span> <span class="n">interval</span>
+    <span class="k">return</span> <span class="n">lower</span><span class="p">,</span> <span class="n">prediction</span><span class="p">,</span> <span class="n">upper</span>
+
+
+<span class="c1">## Plot and save confidence interval of linear regression  - 95% cs_24</span>
+<span class="n">lower_vet</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">upper_vet</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tadpole_predictions</span><span class="p">:</span>
+    <span class="n">lower</span><span class="p">,</span> <span class="n">prediction</span><span class="p">,</span> <span class="n">upper</span> <span class="o">=</span>  <span class="n">get_prediction_interval</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">tadpole_labels_test</span><span class="p">,</span> <span class="n">tadpole_predictions</span><span class="p">)</span>
+    <span class="n">lower_vet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lower</span><span class="p">)</span>
+    <span class="n">upper_vet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">upper</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">tadpole_labels_test</span><span class="p">),</span><span class="mi">1</span><span class="p">),</span><span class="n">upper_vet</span><span class="p">,</span> <span class="n">lower_vet</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Confidence Interval&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">tadpole_labels_test</span><span class="p">),</span><span class="mi">1</span><span class="p">),</span><span class="n">tadpole_labels_test</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Real data&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tadpole_predictions</span><span class="p">,</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Linear regression&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;95</span><span class="si">% c</span><span class="s1">onfidence interval&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/MedICSS2021_33_0.png" src="../../../_images/MedICSS2021_33_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="predicting-ventricles-size">
+<h2>Predicting Ventricles size<a class="headerlink" href="#predicting-ventricles-size" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tadpole_labels_train</span> <span class="o">=</span> <span class="n">y_num_train_imp</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="c1">#ADAS13</span>
+<span class="n">lin_reg</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span> 
+
+<span class="c1">#Fit model on training set</span>
+<span class="n">lin_reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">tadpole_prepared_train</span><span class="p">,</span> <span class="n">tadpole_labels_train</span><span class="p">)</span>
+
+<span class="c1">#Predict on testing set</span>
+<span class="n">tadpole_predictions</span> <span class="o">=</span> <span class="n">lin_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">tadpole_prepared_test</span><span class="p">)</span>
+
+<span class="c1">#Error metric</span>
+<span class="n">tadpole_labels_test</span> <span class="o">=</span> <span class="n">y_num_test_imp</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> 
+<span class="n">mae_vent</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">tadpole_predictions</span><span class="p">,</span> <span class="n">tadpole_labels_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mae_vent</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10488.441080704242
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Plot and save confidence interval of linear regression  - 95% cs_24</span>
+<span class="n">lower_vet</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">upper_vet</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tadpole_predictions</span><span class="p">:</span>
+    <span class="n">lower</span><span class="p">,</span> <span class="n">prediction</span><span class="p">,</span> <span class="n">upper</span> <span class="o">=</span>  <span class="n">get_prediction_interval</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">tadpole_labels_test</span><span class="p">,</span> <span class="n">tadpole_predictions</span><span class="p">)</span>
+    <span class="n">lower_vet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lower</span><span class="p">)</span>
+    <span class="n">upper_vet</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">upper</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">tadpole_labels_test</span><span class="p">),</span><span class="mi">1</span><span class="p">),</span><span class="n">upper_vet</span><span class="p">,</span> <span class="n">lower_vet</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Confidence Interval&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">tadpole_labels_test</span><span class="p">),</span><span class="mi">1</span><span class="p">),</span><span class="n">tadpole_labels_test</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Real data&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tadpole_predictions</span><span class="p">,</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Linear regression&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;95</span><span class="si">% c</span><span class="s1">onfidence interval&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/MedICSS2021_37_0.png" src="../../../_images/MedICSS2021_37_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="random-forests">
+<h1>Random Forests<a class="headerlink" href="#random-forests" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Choose variable - diagnosi</span>
+
+<span class="n">tadpole_labels_train</span> <span class="o">=</span> <span class="n">y_cat_train_imp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Import Random Forest Model</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+
+<span class="c1">#Create a Gaussian Classifier</span>
+<span class="n">clf</span><span class="o">=</span><span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="c1">#Train the model using the training sets </span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">tadpole_prepared_train</span><span class="p">,</span> <span class="n">tadpole_labels_train</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
+
+<span class="c1"># Test </span>
+<span class="n">y_pred</span><span class="o">=</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">tadpole_prepared_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># View accuracy score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">classification_report</span>
+<span class="n">tadpole_labels_test</span> <span class="o">=</span> <span class="n">y_cat_test_imp</span>
+<span class="n">accuracy_score</span><span class="p">(</span><span class="n">tadpole_labels_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9017894298793175
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># View confusion matrix for test data and predictions</span>
+<span class="n">confusion_matrix</span><span class="p">(</span><span class="n">tadpole_labels_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 339,    0,   59],
+       [   0,  418,   81],
+       [  61,   35, 1410]], dtype=int64)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">y_cat_train_imp</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MCI    5921
+CN     2051
+AD     1637
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># View the classification report for test data and predictions</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">tadpole_labels_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
+
+          AD       0.85      0.85      0.85       398
+          CN       0.92      0.84      0.88       499
+         MCI       0.91      0.94      0.92      1506
+
+    accuracy                           0.90      2403
+   macro avg       0.89      0.88      0.88      2403
+weighted avg       0.90      0.90      0.90      2403
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./pages/notebooks/modelling"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../overview.html" title="previous page">Project Notebooks</a>
+    <a class='right-next' id="next-link" href="../../other/contributors.html" title="next page">Contributors</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Neil Oxtoby<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
