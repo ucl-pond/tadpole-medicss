@@ -6,7 +6,7 @@ name: tadpole_brains
 align: center
 width: 70%
 ---
-<!-- **figure caption**. -->
+
 ```
 
 ## UCL **M**edical **I**mage **C**omputing **S**ummer **S**chool
