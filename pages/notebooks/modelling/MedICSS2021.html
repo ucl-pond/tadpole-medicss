@@ -311,6 +311,11 @@
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualise-the-data">
+     Visualise the data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#split-the-dataset-into-train-and-test">
      Split the dataset into train and test
     </a>
@@ -622,6 +627,78 @@
 </div>
 </div>
 </div>
+<div class="section" id="visualise-the-data">
+<h2>Visualise the data<a class="headerlink" href="#visualise-the-data" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add age at exam</span>
+<span class="n">tadpole</span><span class="o">.</span><span class="n">EXAMDATE</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">tadpole</span><span class="o">.</span><span class="n">EXAMDATE</span><span class="p">)</span>
+<span class="n">tadpole_grouped</span> <span class="o">=</span> <span class="n">tadpole</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;RID&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:(</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;EXAMDATE&quot;</span><span class="p">]</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;EXAMDATE&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days</span><span class="o">/</span><span class="mf">365.25</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;AGE&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+<span class="n">tadpole_grouped</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">tadpole</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;RID&quot;</span><span class="p">,</span> <span class="s2">&quot;EXAMDATE&quot;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">tadpole</span><span class="p">[</span><span class="s2">&quot;AGE_AT_EXAM&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tadpole_grouped</span><span class="o">.</span><span class="n">values</span>
+<span class="n">tadpole</span><span class="p">[</span><span class="s1">&#39;AGE_INT&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tadpole</span><span class="p">[</span><span class="s1">&#39;AGE_AT_EXAM&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tadpole</span><span class="p">[</span><span class="n">tadpole</span><span class="p">[</span><span class="s1">&#39;ADAS13&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">()]</span>\
+    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;AGE_INT&#39;</span><span class="p">)[</span><span class="s1">&#39;ADAS13&#39;</span><span class="p">]</span>\
+    <span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tadpole</span><span class="p">[</span><span class="n">tadpole</span><span class="p">[</span><span class="s1">&#39;ADAS13&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">()]</span>\
+    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;diagnosis&#39;</span><span class="p">)[</span><span class="s1">&#39;ADAS13&#39;</span><span class="p">]</span>\
+    <span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tadpole</span><span class="p">[</span><span class="n">tadpole</span><span class="p">[</span><span class="s1">&#39;Ventricles&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">()]</span>\
+    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;diagnosis&#39;</span><span class="p">)[</span><span class="s1">&#39;Ventricles&#39;</span><span class="p">]</span>\
+    <span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tadpole</span><span class="p">[</span><span class="n">tadpole</span><span class="p">[</span><span class="s1">&#39;Ventricles&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">()]</span>\
+    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;AGE_INT&#39;</span><span class="p">)[</span><span class="s1">&#39;Ventricles&#39;</span><span class="p">]</span>\
+    <span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Other ways of visualising the data</span>
+
+<span class="c1"># Import seaborn</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="c1"># Apply the default theme</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">()</span>
+
+<span class="c1"># Create a visualization</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">relplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">tadpole</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;AGE_INT&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;ADAS13&quot;</span><span class="p">,</span>
+    <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;diagnosis&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;diagnosis&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 <div class="section" id="split-the-dataset-into-train-and-test">
 <h2>Split the dataset into train and test<a class="headerlink" href="#split-the-dataset-into-train-and-test" title="Permalink to this headline">¶</a></h2>
 <p>Perform stratified shuffle split of data  (to avoid over sampling on marital status, ethinicity or gender)</p>
@@ -801,7 +878,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/MedICSS2021_34_0.png" src="../../../_images/MedICSS2021_34_0.png" />
+<img alt="../../../_images/MedICSS2021_41_0.png" src="../../../_images/MedICSS2021_41_0.png" />
 </div>
 </div>
 </div>
@@ -858,7 +935,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/MedICSS2021_38_0.png" src="../../../_images/MedICSS2021_38_0.png" />
+<img alt="../../../_images/MedICSS2021_45_0.png" src="../../../_images/MedICSS2021_45_0.png" />
 </div>
 </div>
 </div>
