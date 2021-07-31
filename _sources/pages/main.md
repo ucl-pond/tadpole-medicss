@@ -26,13 +26,39 @@ _Associated resources_: <br/>
 - Challenge website: [tadpole.grand-challenge.org](https://tadpole.grand-challenge.org)
 - Challenge description manuscript: [arXiv:1805.03909](https://arxiv.org/abs/1805.03909)
 - Challenge results manuscript: [arXiv:2002.03419](https://arxiv.org/abs/2002.03419)
+- TADPOLE Webinars: [YouTube playlist](https://youtube.com/playlist?list=PLmTWgy2Zb3-6qL4K8q6BfV0AGCWJ0SCnu)
 
 _Pre-requisites_: <br/>
 Python
 
+
 ```
 `````
 
+## Approximate schedule for the summer school
+`````{panels}
+:column: col-12
+:header: bg-danger
+:card: border-1 shadow
+^^^
+```{epigraph}
+
+Preparation before the summer school: 
+
+- [Register and apply here for ADNI data access](http://adni.loni.usc.edu/data-samples/access-data/).
+- Watch the introductory [TADPOLE Webinar on YouTube ](https://youtu.be/mZj-sYm7pXg). 
+
+During the school:
+
+* Day 1, 1st hour: Background lecture and Q&A on TADPOLE, Alzheimer's disease, ADNI<br/>
+  Note to project leaders: use full TADPOLE slide deck, i.e., hybrid of background and results webinars.
+* Day 1, 2nd hour: overview of plan for the week + data visualisation.
+* Day 2: Basic machine learning models. Predicting diagnosis using classifiers.
+* Day 3: Regression models for predicting Ventricles and ADAS13.
+* Day 4: The challenge of probabilistic forecasting and attempting to generate a valid TADPOLE Challenge submission.
+
+```
+`````
 
 
 ## **Site content**
